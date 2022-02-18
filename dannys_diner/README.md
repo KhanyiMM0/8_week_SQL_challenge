@@ -12,6 +12,10 @@ He plans on using these insights to help him decide whether he should expand the
 
 Danny has provided you with a sample of his overall customer data due to privacy issues - but he hopes that these examples are enough for you to write fully functioning SQL queries to help him answer his questions!
 
+> ERD Diagram
+
+![dannys_diner_ERD](https://user-images.githubusercontent.com/91197950/154747895-0b03626a-53af-4dc6-b286-811955fb431d.JPG)
+
 ### Case Study Questions
 
 Each of the following case study questions can be answered using a single SQL statement:
@@ -26,3 +30,5 @@ Each of the following case study questions can be answered using a single SQL st
 - What is the total items and amount spent for each member before they became a member?
 - If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 - In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+
+Original Source: [Danny's Diner](https://8weeksqlchallenge.com/case-study-1/)
