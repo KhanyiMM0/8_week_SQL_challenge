@@ -13,3 +13,11 @@ Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runn
 Because Danny had a few years of experience as a data scientist - he was very aware that data collection was going to be critical for his business’ growth.
 
 He has prepared for us an entity relationship diagram of his database design but requires further assistance to clean his data and apply some basic calculations so he can better direct his runners and optimise Pizza Runner’s operations.
+
+
+> ERD Diagram
+
+![pizza runner erd](https://user-images.githubusercontent.com/91197950/155029220-8efc628e-e2f2-4920-905e-acfd48645a3b.JPG)
+
+
+Origitnal Source: [Pizza Runner](https://8weeksqlchallenge.com/case-study-2/)
