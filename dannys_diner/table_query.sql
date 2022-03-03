@@ -154,7 +154,33 @@ GROUP BY 1
 ORDER BY 1
 
 -- 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
-
+with points_first_week as (
+  select
+	sales.customer_id,
+    join_date,
+    join_date + INTEGER '+6' first_week_joined
+from dannys_diner.members members
+JOIN dannys_diner.sales sales
+	 on members.customer_id = sales.customer_id
+JOIN dannys_diner.menu menu
+	ON sales.product_id = menu.product_id)
+    
+SELECT
+	sales.customer_id,
+   SUM(
+     CASE
+    	WHEN product_name = 'sushi' THEN price * 20
+        WHEN sales.order_date BETWEEN join_date and '2021-01-31' then price * 20
+     else price * 10
+     END) total_points
+  from points_first_week points
+  JOIN dannys_diner.sales sales
+  	ON points.customer_id = sales.customer_id
+   JOIN dannys_diner.menu menu
+	ON  sales.product_id = menu.product_id
+   WHERE sales.order_date < '2021-01-31'
+   GROUP BY 1
+   
 -- Bonus Questions --
 --Join All The Things
 --The following questions are related creating basic data tables that Danny and his team can use to quickly derive insights without needing to join the underlying tables using SQL.
